@@ -4,7 +4,7 @@ import Item from '../model/item';
 
 const router = express.Router();
 
-//app/shop/
+//shop/
 router.get('/', (req, res) => {
   Item.find({}, (err, items) => {
     if(err) {res.send(err)}
@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
   });
 });
 
-//app/shop/add
+//shop/add
 router.post('/add', (req, res) => {
   const newItem = new Item(req.body);
 
@@ -22,7 +22,7 @@ router.post('/add', (req, res) => {
   });
 });
 
-//app/shop/:id/update
+//shop/:id/update
 router.post('/:id/update', (req, res) => {
   Item.findByIdAndUpdate(req.params.id, req.body, err => {
     if(err) {res.send(err)}
@@ -32,7 +32,7 @@ router.post('/:id/update', (req, res) => {
   });
 });
 
-//app/shop/:id/delete
+//:id/delete
 router.get('/:id/delete', (req, res) => {
   Item.findByIdAndRemove(req.params.id,(err, item) => {
     if(err) {res.send(err)}
