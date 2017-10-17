@@ -17,7 +17,7 @@ router.post('/add', (req, res) => {
   const newItem = new Item(req.body);
 
   newItem.save((err) => {
-    if(err) {res.send(err)}
+    if(err) return res.redirect('http://localhost:3000/')
     res.redirect('http://localhost:3000/')
   });
 });

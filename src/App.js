@@ -30,6 +30,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>E-Shop</h1>
         <List items={this.state.items}/>
         <Form />
       </div>

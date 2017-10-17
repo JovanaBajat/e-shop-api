@@ -27,6 +27,23 @@ a {
   color: black;
 }
 
+li{
+  list-style-type: none;
+}
+ul{
+  border: 2px solid black;
+  padding: 20px 50px;
+  border-radius: 7px;
+  width: 30%;
+  margin: 30px auto;
+}
+button {
+  cursor: pointer;
+}
+
+input {
+  margin-right: 10px;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
